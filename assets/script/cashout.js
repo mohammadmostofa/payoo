@@ -55,6 +55,9 @@
 // })
 
 
+
+
+
 // process two shortcut
 
 document.getElementById("cashout-btn").addEventListener("click",function(){ 
@@ -73,15 +76,20 @@ document.getElementById("cashout-btn").addEventListener("click",function(){
   // get  cashout amount
   const cashoutAmount = getValueFromInput("cashout-amount");
 
- // get current balance
-   const balanceElement = document.getElementById("balance");
-   const balance = balanceElement.innerText;
-   console.log(balance)
+ // get current balance || ata ekon proyojon nai current balance er jonno machie make kora hoyeche
+ // ekon sudu oi function ta ke call dilea hobe
+  //  const balanceElement = document.getElementById("balance");
+  //  const balance = balanceElement.innerText;
+  //  console.log(balance);
 
+
+  // current balance function call dile current balance function ta output asbe
+
+  const currentBalance = getBalance();
 
   //calculate balance > cashout amount and balance
 
-  const newBalance = Number(balance) - Number(cashoutAmount);
+  const newBalance = currentBalance - Number(cashoutAmount);//current balance number ye convert kora ase 
   //console.log(newBalance);
 
 if(newBalance < 0 ){
@@ -101,8 +109,16 @@ if(newBalance < 0 ){
      alert("cashout successfully")
 
      console.log(newBalance, 'new Balance');
-     balanceElement.innerText = newBalance; //amr je balanceElement er bitore je innner text ase sekane newBalance ta bosabe
-  } else{
+    
+   //  balanceElement.innerText = newBalance; //amr je balanceElement er bitore je innner text ase sekane newBalance ta bosabe
+   
+   //get balance use korar jonno aikane balance ke id er mdde dorte hobe
+   ///document.getElementById("balance").innerText = newBalance;
+   // use function to show balance
+
+      getBalance(newBalance);
+
+    } else{
      alert("Invalid pin")
     return;
    }

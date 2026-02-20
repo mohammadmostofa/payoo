@@ -65,19 +65,87 @@
 
     <div class="buttons grid grid-cols-3 gap-3">
    <!-- button er omdde auto flex o height fixed deoya take at change korte hbe -->
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-1.png" alt=""><p>Add money</p> </button>
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-2.png" alt=""><p>Add money</p> </button>
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-3.png" alt=""><p>Add money</p> </button>
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-4.png" alt=""><p>Add money</p> </button>
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-5.png" alt=""><p>Add money</p> </button>
-      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-6.png" alt=""><p>Add money</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-1.png" alt=""><p>Add Money</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-2.png" alt=""><p>Cashout</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft whitespace-nowrap"> <img src="assets/images/opt-3.png" alt=""><p>Transfer Money</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-4.png" alt=""><p>Get Bonus</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-5.png" alt=""><p>Pay Bill</p> </button>
+      <button class="btn flex-col h-full py-4 btn-primary btn-soft"> <img src="assets/images/opt-6.png" alt=""><p>transations</p> </button>
 
     </div>
 
   </section>
 
-  <!-- Cashout --->
 
+
+  <!-- Add money -->
+  <section id="add-money" class="w-11/12 mx-auto py-5">
+    <h2 class="text-2xl font-bold mb-5">Add Money</h2>
+
+    <div class="form pt-10">
+      <div class="card bg-base-100 w-full shadow-sm rounded-2xl">
+      <div class="card-body">
+
+        <!-- form field -->
+        <fieldset class="fieldset">
+
+          <!-- select input -->
+          <label class="label text-neutral font-bold">Select Bank</label>
+
+          <select id="add-money-bank" class="select select-primary w-full rounded-full bg-base-200">
+            <option disabled selected>Select a Bank</option>
+            <option value="DBBL">DBBL</option>
+            <option value="IBBL">IBBL</option>
+            <option value="City">City Bank</option>
+          </select>
+
+          <br>
+
+
+          <!-- cashout number  -->
+          <label class="label text-neutral font-bold">Bank Account Number</label>
+          <input id="add-money-number" maxlength="11" minlength="11" type="email" class="input rounded-full w-full bg-base-200" placeholder="Enter 11 digit account number" />
+         
+          <br>
+
+          <!-- cashoutamount -->
+          <label class="label text-neutral font-bold">Amount to Add</label>
+          <input id="add-money-amount" type="number" class="input rounded-full w-full bg-base-200"
+          value=""
+           placeholder="Add Amount to withdraw" />
+          
+          <br>
+
+          <!-- cashout pin -->
+          <label class="label text-neutral font-bold">pin Number</label>
+          <input id="add-amount-pin" maxlength="4" type="password" 
+          class="input rounded-full w-full bg-base-200" placeholder="Enter 4 Digit Pin number" value="" />
+          
+          <br>
+
+          <div><a class="link link-hover">Forgot password?</a></div>
+
+
+          <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+        </fieldset>
+      </div>
+    </div>
+
+   <!-- cashout js -->
+    <script src="assets/script/cashout.js"></script>
+
+    <!-- machine js-->
+    <script src="assets/script/machine.js"></script>
+
+</div>
+  </section>
+
+
+
+
+
+
+  <!-- Cashout --->
   <section id="cashout" class="w-11/12 mx-auto py-5">
     <h2 class="text-2xl font-bold mb-5">cashout</h2>
 
@@ -117,16 +185,19 @@
       </div>
     </div>
 
-
-    <script src="assets/script/cashout.js"></script>
-
-    <!-- machine  -->
-
-    <script src="assets/script/machine.js"></script>
-
 </div>
   </section>
 
+
+
+  <!-- machine js-->
+  <script src="assets/script/machine.js"></script>
+
+  <!-- add money js -->
+   <script src="assets/script/addMoney.js"></script>
+
+  <!-- cashout js -->
+    <script src="assets/script/cashout.js"></script>
 
 
 </body>
