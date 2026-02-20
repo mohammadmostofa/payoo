@@ -29,3 +29,28 @@ function setBalance (value){
   balanceElement.innerText = value
 
 }
+
+
+// ami jekane click korbo tar details dekhabe baki sob hide takbe ta kibabe korbo
+//machine toiri kora holo
+
+//machine > id > allhide > one id show which i want
+
+function showOnly (id){
+  const addMoney = document.getElementById("add-money");
+  const cashout = document.getElementById("cashout");
+  //console.log(`add money ${addMoney}, cashout - ${cashout}  `) ;
+
+  // ekon sobai ke hide koro
+
+  addMoney.classList.add("hidden");
+  cashout.classList.add("hidden");
+
+  //id wala element ke show koro
+  const selected = document.getElementById(id);
+   selected.classList.remove("hidden");
+
+  
+}
+
+  
