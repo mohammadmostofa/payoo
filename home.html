@@ -76,7 +76,7 @@
 
   </section>
 
-  <!-- outCash --->
+  <!-- Cashout --->
 
   <section id="cashout" class="w-11/12 mx-auto py-5">
     <h2 class="text-2xl font-bold mb-5">cashout</h2>
@@ -84,22 +84,28 @@
     <div class="form pt-10">
       <div class="card bg-base-100 w-full shadow-sm rounded-2xl">
       <div class="card-body">
+
+        <!-- form field -->
         <fieldset class="fieldset">
+
+          <!-- cashout number  -->
           <label class="label text-neutral font-bold">Agent Number</label>
           <input id="cashout-number" maxlength="11" minlength="11" type="email" class="input rounded-full w-full bg-base-200" placeholder="Enter Agent  11 Digit Number" />
          
           <br>
 
+          <!-- cashoutamount -->
           <label class="label text-neutral font-bold">Amount</label>
           <input id="cashout-amount" type="number" class="input rounded-full w-full bg-base-200"
-          value="0123456789"
+          value=""
            placeholder="Enter amount to widthrow" />
           
           <br>
 
+          <!-- cashout pin -->
           <label class="label text-neutral font-bold">pin Number</label>
           <input id="cashout-pin" maxlength="4" type="password" 
-          class="input rounded-full w-full bg-base-200" placeholder="Enter 4 Digit Pin number" value="1234" />
+          class="input rounded-full w-full bg-base-200" placeholder="Enter 4 Digit Pin number" value="" />
           
           <br>
 
@@ -113,6 +119,10 @@
 
 
     <script src="assets/script/cashout.js"></script>
+
+    <!-- machine  -->
+
+    <script src="assets/script/machine.js"></script>
 
 </div>
   </section>
